@@ -5,6 +5,7 @@ package application;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
@@ -49,6 +50,13 @@ public class UI {
 			throw new InputMismatchException("Error reading ChessPosition!");
 		}
 		
+	}
+	
+	public static void printMatch(ChessMatch chessMatch) {
+		printBoard(chessMatch.getPieces());
+		System.out.println();
+		System.out.println("----- #" + chessMatch.getTurn() + " Turn -----");
+		System.out.println("Waiting " + (chessMatch.getCurrentPlayColor() == Color.WHITE ? ANSI_WHITE : ANSI_PURPLE) + chessMatch.getCurrentPlayColor() + ANSI_RESET + " player...");
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
