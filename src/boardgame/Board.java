@@ -27,13 +27,13 @@ public class Board {
 		return columns;
 	}
 
-	public Piece piece(int row, int columns) {
+	public Piece piece(int row, int column) {
 		
-		if(!positionExists(row, columns)) {
+		if(!positionExists(row, column)) {
 			throw new BoardException("Position not on the Board!");
 		}
 		
-		return pieces[row][columns];
+		return pieces[row][column];
 	}
 	
 	public Piece piece(Position position) {
