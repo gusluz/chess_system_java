@@ -62,6 +62,9 @@ public class UI {
 		System.out.println();
 		System.out.println("----- #" + chessMatch.getTurn() + " Turn -----");
 		System.out.println("Waiting " + (chessMatch.getCurrentPlayColor() == Color.WHITE ? ANSI_WHITE : ANSI_PURPLE) + chessMatch.getCurrentPlayColor() + ANSI_RESET + " player...");
+		if(chessMatch.getCheck()) {
+			System.out.println("-> CHECK!\n");
+		}
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {

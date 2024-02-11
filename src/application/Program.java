@@ -22,8 +22,7 @@ public class Program {
 			try {
 				UI.clearScreen();
 				UI.printMatch(chessMatch, capturedList);
-				System.out.println();
-				System.out.print("Source: ");
+				System.out.print("\nSource: ");
 				ChessPosition source = UI.readChessPosition(scanner);
 				
 				boolean[][] matPossibleMoves = chessMatch.possibleMoves(source);
